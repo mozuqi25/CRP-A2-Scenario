@@ -7,3 +7,17 @@ format: html
 # Hello, World! :)
 
 This line is chosen from main and tesbranch merge.
+
+## Creating a Plot {#sec-plot}
+The plot below illustrates the key data trends discussed on this section.
+
+```{r}
+#| echo: false
+library(ggplot2)
+
+lonmar <- read.csv("./data/london_marathon.csv")
+
+ggplot(lonmar, aes(x = Year, y = Finishers)) +
+  geom_line() +
+  ggtitle("London Marathon Finisher by Year")
+```
